@@ -1,9 +1,9 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
-import { UsersModule } from './modules/users/users.module';
 import {ConfigModule} from '@nestjs/config';
 import * as Joi from 'joi';
 import { MongooseModule } from '@nestjs/mongoose';
-import { HttpLoggerMiddleware } from './commons/middleware/httplogger/httplogger.middleware';
+import { HttpLoggerMiddleware } from 'src/core/middlewares/httplogger.middleware';
+
 
 @Module({
   imports: [
@@ -18,11 +18,11 @@ import { HttpLoggerMiddleware } from './commons/middleware/httplogger/httplogger
       }    
     ), 
     MongooseModule.forRoot(process.env.MONGO_URI),
-    UsersModule],
+  ],
   providers: [],
 })
 export class AppModule implements NestModule{
   configure(consumer: MiddlewareConsumer){
-    consumer.apply(HttpLoggerMiddleware).forRoutes('*');
+    consumer.apply(HttpLoggerMiddleware).forRoutes("*")
   }
 }
