@@ -21,12 +21,20 @@ services:
     #     volumes:
     #         - ./nginx.conf:/etc/nginx/nginx.conf
 
-    auth:
-        build: ./ms-auth
-        image: ms-auth
-        container_name: ms-auth
-        ports:
-            - "8000:8000"
+    # auth:
+    #     build: ./ms-auth
+    #     image: ms-auth
+    #     container_name: ms-auth
+    #     ports:
+    #         - "8000:8000"
+
+    
+    cv_craft:
+        build: ./ms-cv-craft
+        image: ms-cv-craft
+        container_name: ms-cv-craft
+        port:
+            - "8001:8001"
 
 
 networks:
