@@ -1,4 +1,4 @@
-export NODE_ENV=dev
+export NODE_ENV=production
 export PORT=8001
 
 export MONGO_HOST="mongo"
