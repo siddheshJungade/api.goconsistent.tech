@@ -67,13 +67,24 @@ export class PdfResumeService {
 
   // Step 5: Generate PDF using Puppeteer
   async generatePdf(html: string, customCSS: string | null | undefined) {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      headless: true,
+      executablePath: '/usr/bin/google-chrome-stable',
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--single-process',
+        '--disable-accelerated-2d-canvas',
+        '--disable-gpu',
+      ],
+    });
     const page = await browser.newPage();
     await page.setContent(html);
     if (customCSS) {
       await page.addStyleTag({ content: customCSS });
     }
-    const buffer: Buffer = await page.pdf({ path: 'output.pdf', format: 'A4' });
+    const buffer: Buffer = await page.pdf({ format: 'A4' });
 
     return buffer;
   }
