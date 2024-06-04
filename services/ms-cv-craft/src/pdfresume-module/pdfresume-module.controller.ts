@@ -34,7 +34,7 @@ export class PdfResumeController {
         resumeDataState.resumeDataState.personalDetails['Last Name'];
 
       const fileName = firstName + ' ' + lastName;
-      // res.contentType('application/pdf');
+      res.contentType('application/pdf');
       res.header(
         'Content-Disposition',
         `attachment; filename="${fileName} RESUME.pdf"`,

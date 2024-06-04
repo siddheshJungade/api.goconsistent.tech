@@ -72,6 +72,7 @@ export class PdfResumeService {
       executablePath: '/usr/bin/google-chrome-stable',
       args: [
         '--no-sandbox',
+        '--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
         '--single-process',
@@ -79,6 +80,19 @@ export class PdfResumeService {
         '--disable-gpu',
       ],
     });
+    //   {
+    //   headless: true,
+    //   // executablePath: '/usr/bin/google-chrome-stable',
+    //   args: [
+    //     '--no-sandbox',
+    //     '--disable-setuid-sandbox',
+    //     '--disable-dev-shm-usage',
+    //     '--single-process',
+    //     '--disable-accelerated-2d-canvas',
+    //     '--disable-gpu',
+    //   ],
+    // }
+    // );
     const page = await browser.newPage();
     await page.setContent(html);
     if (customCSS) {
