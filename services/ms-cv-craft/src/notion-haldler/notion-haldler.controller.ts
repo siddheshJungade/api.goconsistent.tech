@@ -1,13 +1,20 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, Res } from '@nestjs/common';
 import { NotionHaldlerService } from './notion-haldler.service';
-
+import { Response } from 'express';
 @Controller('notion')
 export class NotionHaldlerController {
   constructor(private readonly notionService: NotionHaldlerService) {}
   @Post('/contact')
-  async addContactDetails(@Body() body: any): Promise<any> {
-    console.log(body);
-    const data = await this.notionService.addContactDetails(body);
-    return { code: 200, msg: data };
+  async addContactDetails(
+    @Body() body: any,
+    @Res() res: Response,
+  ): Promise<any> {
+    if (Object.keys(body).length > 0) {
+      const data = await this.notionService.addContactDetails(body);
+      console.log(data);
+      res.status(201).send({ message: 'contact added sucesfully' });
+    } else {
+      res.status(401).send({ message: 'Empty Contact Object' });
+    }
   }
 }
