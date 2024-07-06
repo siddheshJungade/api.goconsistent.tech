@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { PdfresumeModuleModule } from './pdfresume-module/pdfresume-module.module';
 import { ConfigModule } from '@nestjs/config';
 // import { MongooseModule } from '@nestjs/mongoose';
+import { NotionHaldlerModule } from './notion-haldler/notion-haldler.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { ConfigModule } from '@nestjs/config';
     //   { dbName: process.env.MONGO_DATABASE },
     // ),
     PdfresumeModuleModule,
+    NotionHaldlerModule,
   ],
   controllers: [AppController],
 })
