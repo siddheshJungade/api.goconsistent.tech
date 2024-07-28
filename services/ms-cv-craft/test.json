@@ -1,0 +1,65 @@
+{
+    "resumeDataState": {
+        "educationDetails": [
+            {
+                "College/School Name": "Govt. College Of Engineering, Yavatmal",
+                "Course": "B.Tech",
+                "Location": "Yavatmal, Maharashatra, India",
+                "Year": "2019-2022"
+            }
+        ],
+        "experienceDetails": [
+            {
+                "descriptions": [
+                    "Developed an admin portal that empowered the operational team with a user-friendly interface for managing user information, tracking commissions, and updating contract statuses.",
+                    "Developed Bulk Status Update feature processing over 1000 records daily, reducing status update time by 80%. Implemented short polling for progress tracking and efficient background job processing. Enabled bulk modifications using JSON or Excel for enhanced flexibility.",
+                    "Implemented broker onboarding automation with AWS Cognito for seamless contract generation & integrated JIRA API for efficient service management, reducing onboarding time from 2 hours to 3 minutes while minimizing repetitive tasks.",
+                    "Implemented a customized PDF download functionality using the PDF Kit library, enabling customers to download personalized quotes generated specifically for them. This feature ensures that each customer can access & download their unique quote in PDF format, enhancing the user experience and providing tailored information.",
+                    "Developed a user-friendly low-code real-time data visualization app for management, featuring dynamic charts for live broker and contract performance insights.",
+                    "Designed and developed a flexible Commission Management System for efficient allocation of commissions in energy contracts. It offers seamless integration of supplier terms, adaptability to evolving requirements, and facilitates effortless generation of broker invoices, prioritizing operational efficiency in managing commission-related transactions.",
+                    "Implemented an internal private NPM package system that can be reused across different client projects, significantly improving efficiency & code reusability by 60%.",
+                    "Handled diverse development tasks, focusing on maintaining 75% code coverage using a test-driven approach. Automated deployment activity using Docker and CI/CD pipelines, and conducted thorough unit testing and end-to- end testing. Emphasized detailed documentation and worked closely with clients to understand requirements, ensuring projects ran smoothly. Additionally, converted traditional JavaScript callback code to TypeScript, ensuring type-safe implementations throughout the codebase."
+                ],
+                "Company": "DigitalAPICraft",
+                "Role": "Software Developer",
+                "Location": "Bangalore, India",
+                "Date": "Dec 2022 - Present"
+            }
+        ],
+        "projectDetails": [
+            {
+                "descriptions": [
+                    "Resume Builder Web App that allows users to create professional resumes using the Jack Ryan resume template. Implemented PDF download functionality for quick and efficient access to high-quality, visually appealing resumes."
+                ],
+                "Project Name": "ResumeCraft",
+                "Tech": "Typescript, Next.js, Nest.js, Docker, CICD and Netlify",
+                "Link": "https://resumecrafting.siddheshjungade.dev/"
+            }
+        ],
+        "achievementDetails": [
+            {
+                "descriptions": [
+                    ""
+                ]
+            }
+        ],
+        "skillDetails": [
+            {
+                "Skill Category": "Languages",
+                "Skills": " JavaScript, Typescript, Java, Python, C++, HTML5, and CSS3"
+            },
+            {
+                "Skill Category": "Technologies ",
+                "Skills": "Node.js, Express, Rest API, AWS ( VPC, EC2,ELB, IAM, DMS, DynomoDb, ECS, ECR, RDS, S3, API Getaway, EventBridge, Lambda,Secrets Manager, SNS , SQS, SES ), Nest.JS, Docker, Next.js, MySQL, MongoDB, PostgreSQL, Appsmith, and GitHub Action"
+            }
+        ],
+        "personalDetails": {
+            "First Name": "Siddhesh",
+            "Last Name": "Jungade",
+            "Email": "siddheshjungade@gmail.com",
+            "Phone No": "07020276567",
+            "Github URL": "https://github.com/siddheshJungade",
+            "Linkedin URL": "https://www.linkedin.com/in/siddheshjungade/"
+        }
+    }
+}

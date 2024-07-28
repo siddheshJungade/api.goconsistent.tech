@@ -8,13 +8,12 @@
 </div>
 
 
+
+
 <!-- education section  -->
-{{#if EDUCATION_LIST}}
-## Education
-{{#each EDUCATION_LIST}}
-### {{COLLAGE_NAME}} <span class="spacer"></span><span class="normal">{{COLLAGE_YEAR}}</span>
-#### {{COLLAGE_COURSE}}<span class="spacer"></span>{{COLLAGE_LOCATION}}
-{{/each}}
+{{#if SUMMARY}}
+## Summary
+{{SUMMARY}}
 {{/if}}
 
 
@@ -52,4 +51,15 @@
 
 {{/each}}
 </div>
+{{/if}}
+
+
+
+<!-- education section  -->
+{{#if EDUCATION_LIST}}
+## Education
+{{#each EDUCATION_LIST}}
+### {{COLLAGE_NAME}} <span class="spacer"></span><span class="normal">{{COLLAGE_YEAR}}</span>
+#### {{COLLAGE_COURSE}}<span class="spacer"></span>{{COLLAGE_LOCATION}}
+{{/each}}
 {{/if}}

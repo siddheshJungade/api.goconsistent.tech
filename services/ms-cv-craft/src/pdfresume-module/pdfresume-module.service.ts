@@ -55,6 +55,7 @@ export class PdfResumeService {
         CATEGORY: item['Skill Category'],
         SKILLS: item['Skills'],
       })),
+      SUMMARY: data.personalDetails['Summary'],
     };
     return compiledTemplate(newData);
   };
