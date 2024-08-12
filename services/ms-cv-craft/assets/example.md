@@ -16,6 +16,17 @@
 {{SUMMARY}}
 {{/if}}
 
+<!-- skills section -->
+{{#if SKILL_LIST}}
+## Skills
+<div class="indent" markdown='1'>
+{{#each SKILL_LIST}}
+
+**{{CATEGORY}}**: {{SKILLS}}
+
+{{/each}}
+</div>
+{{/if}}
 
 <!-- experience section -->
 {{#if EXPERIENCE_LIST}}
@@ -41,17 +52,7 @@
 {{/if}}
 
 
-<!-- skills section -->
-{{#if SKILL_LIST}}
-## Skills
-<div class="indent" markdown='1'>
-{{#each SKILL_LIST}}
 
-**{{CATEGORY}}**: {{SKILLS}}
-
-{{/each}}
-</div>
-{{/if}}
 
 
 
