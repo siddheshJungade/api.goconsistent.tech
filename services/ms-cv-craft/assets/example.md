@@ -43,7 +43,7 @@
 
 <!-- skills section -->
 {{#if SKILL_LIST}}
-## Technical Skills
+## Skills
 <div class="indent" markdown='1'>
 {{#each SKILL_LIST}}
 
