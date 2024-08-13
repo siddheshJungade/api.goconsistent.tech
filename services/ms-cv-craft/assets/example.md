@@ -3,12 +3,9 @@
 <div class="section headerInfo" markdown='1'>
 - {{PHONE_NO}}
 - [{{EMAIL}}]({{EMAIL_LINK}})
-- [linkedin.com]({{LINKEDIN_URL}})
-- [github.com]({{GITHUB_URL}})
+- [{{LINKEDIN_URL}}](https://{{LINKEDIN_URL}})
+- [{{GITHUB_URL}}](https://{{GITHUB_URL}})
 </div>
-
-
-
 
 <!-- education section  -->
 {{#if SUMMARY}}
@@ -51,11 +48,6 @@
   {{/each }}
 {{/if}}
 
-
-
-
-
-
 <!-- education section  -->
 {{#if EDUCATION_LIST}}
 ## Education
@@ -64,3 +56,6 @@
 #### {{COLLAGE_COURSE}}<span class="spacer"></span>{{COLLAGE_LOCATION}}
 {{/each}}
 {{/if}}
+
+
+

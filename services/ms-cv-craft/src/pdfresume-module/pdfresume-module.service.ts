@@ -28,8 +28,11 @@ export class PdfResumeService {
       EMAIL: data.personalDetails['Email'],
       EMAIL_LINK: `mailto:${data.personalDetails['Email']}`,
       PHONE_NO: data.personalDetails['Phone No'],
-      LINKEDIN_URL: data.personalDetails['Linkedin URL'],
-      GITHUB_URL: data.personalDetails['Github URL'],
+      LINKEDIN_URL: data.personalDetails['Linkedin URL']?.replace(
+        'https://',
+        '',
+      ),
+      GITHUB_URL: data.personalDetails['Github URL']?.replace('https://', ''),
       EDUCATION_LIST: data.educationDetails.map((item: EducationDetailDto) => ({
         COLLAGE_NAME: item['College/School Name'],
         COLLAGE_YEAR: item['Year'],
@@ -68,7 +71,9 @@ export class PdfResumeService {
 
   // Step 5: Generate PDF using Puppeteer
   async generatePdf(html: string, customCSS: string | null | undefined) {
-    const browser = await puppeteer.launch({
+    const browser = await puppeteer.launch(
+      
+      {
       headless: true,
       executablePath: '/usr/bin/google-chrome-stable',
       args: [
@@ -80,7 +85,8 @@ export class PdfResumeService {
         '--disable-accelerated-2d-canvas',
         '--disable-gpu',
       ],
-    });
+    }
+  );
     //   {
     //   headless: true,
     //   // executablePath: '/usr/bin/google-chrome-stable',
